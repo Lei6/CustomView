@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".music.MusicActivity">
+
+    <TextView
+        android:id="@+id/tv_play_pause"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:background="@drawable/select_music_text_bg"
+        android:gravity="center"
+        android:text="Play"
+        android:textAllCaps="false"
+        android:textColor="@drawable/select_music_text_color"
+        android:textSize="15dp" />
+
+    <SeekBar
+        android:id="@+id/sb_scale"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/tv_play_pause"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <SeekBar
+        android:id="@+id/sb_progress"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/sb_scale"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp" />
+
+    <com.demo.customview.music.MusicView
+        android:id="@+id/lrcv_lrc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sb_progress"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:ui_view_music_maxScale="1.7"
+        app:ui_view_music_minScale="0.7"
+        app:ui_view_music_padding="17dp"
+        app:ui_view_music_textColor="#000"
+        app:ui_view_music_textColorCur="#C43535"
+        app:ui_view_music_textSize="15dp"
+        app:ui_view_music_textSizeCur="17dp"
+        app:ui_view_music_timeColor="#000"
+        app:ui_view_music_timeSize="8dp" />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ui_view_MusicView">
+        <attr name="ui_view_music_textColor" format="color"/>
+        <attr name="ui_view_music_textColorCur" format="color"/>
+        <attr name="ui_view_music_timeColor" format="color"/>
+        <attr name="ui_view_music_textSize" format="dimension"/>
+        <attr name="ui_view_music_textSizeCur" format="dimension"/>
+        <attr name="ui_view_music_timeSize" format="dimension"/>
+        <attr name="ui_view_music_padding" format="dimension"/>
+        <attr name="ui_view_music_minScale" format="float"/>
+        <attr name="ui_view_music_maxScale" format="float"/>
+    </declare-styleable>
+
+</resources>
