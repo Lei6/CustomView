@@ -15,5 +15,12 @@
         android:text="音乐播放"
         android:background="#CC3939"
         android:textColor="#ffffff"/>
-
+    <Button
+        android:id="@+id/btn_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="切换按钮"
+        android:background="#CC3939"
+        android:textColor="#ffffff"/>
 </LinearLayout>

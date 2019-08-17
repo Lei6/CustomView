@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".toggle.ToggleButtonActivity">
+
+    <com.demo.customview.toggle.ToggleButton
+        android:id="@+id/btn_toggle"
+        android:layout_width="60dp"
+        android:layout_height="32dp"
+        android:layout_margin="12dp"
+        app:ui_view_colorThumb="@color/colorFFFFFF"
+        app:ui_view_colorTrackOpen="#008577"
+        app:ui_view_colorTrackOff="@color/colorFFFFFF"
+        app:ui_view_colorPadding="@color/colorE34E5"
+        app:ui_view_padding="1.5dp"
+        app:ui_view_duration="250"
+        />
+
+
+</LinearLayout>

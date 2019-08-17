@@ -12,5 +12,14 @@
         <attr name="ui_view_music_minScale" format="float"/>
         <attr name="ui_view_music_maxScale" format="float"/>
     </declare-styleable>
+    
+    <declare-styleable name="ui_view_ToggleButton">
+        <attr name="ui_view_colorThumb" format="color"/>
+        <attr name="ui_view_colorTrackOpen" format="color"/>
+        <attr name="ui_view_colorTrackOff" format="color"/>
+        <attr name="ui_view_colorPadding" format="color"/>
+        <attr name="ui_view_padding" format="dimension"/>
+        <attr name="ui_view_duration" format="integer"/>
+    </declare-styleable>
 
 </resources>

@@ -8,10 +8,12 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.demo.customview.music.MusicActivity;
+import com.demo.customview.toggle.ToggleButtonActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnPlay;
+    private Button btnToggle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,17 +24,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView() {
         btnPlay = (Button) findViewById(R.id.btn_play);
+        btnToggle = (Button) findViewById(R.id.btn_toggle);
         btnPlay.setOnClickListener(this);
+        btnToggle.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent();
+        Intent intent =null;
         switch (view.getId()) {
             case R.id.btn_play:
-                intent.setClass(this, MusicActivity.class);
-                startActivity(intent);
+               intent = new Intent(this, MusicActivity.class);
                 break;
+            case R.id.btn_toggle:
+                intent = new Intent(this, ToggleButtonActivity.class);
+                break;
+        }
+        if (intent!=null){
+            startActivity(intent);
         }
     }
 }
