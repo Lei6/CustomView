@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".toggle.ToggleButtonActivity"></activity>
+        <activity android:name=".sort.SideActivity"></activity>
+        <activity android:name=".toggle.ToggleButtonActivity" />
         <activity android:name=".music.MusicActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

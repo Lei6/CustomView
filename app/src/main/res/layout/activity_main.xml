@@ -21,6 +21,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:text="切换按钮"
-        android:background="#CC3939"
+        android:background="#CCC539"
+        android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btn_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="列表，分类"
+        android:background="#39CC8C"
         android:textColor="#ffffff"/>
 </LinearLayout>

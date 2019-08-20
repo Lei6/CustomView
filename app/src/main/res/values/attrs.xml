@@ -22,4 +22,13 @@
         <attr name="ui_view_duration" format="integer"/>
     </declare-styleable>
 
+    <declare-styleable name="ui_view_SideBar">
+        <attr name="ui_view_sidebar_type">
+            <enum name="normal" value="0"/>
+            <enum name="center" value="1"/>
+        </attr>
+        <attr name="ui_view_sidebar_letters" format="string"/>
+        <attr name="ui_view_sidebar_maxCount" format="integer"/>
+    </declare-styleable>
+
 </resources>
