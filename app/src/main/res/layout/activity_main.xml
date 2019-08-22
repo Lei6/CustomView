@@ -4,32 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_play"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="音乐播放"
         android:background="#CC3939"
-        android:textColor="#ffffff"/>
+        android:text="音乐播放"
+        android:textColor="#ffffff" />
+
     <Button
         android:id="@+id/btn_toggle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="切换按钮"
         android:background="#CCC539"
-        android:textColor="#ffffff"/>
+        android:text="切换按钮"
+        android:textColor="#ffffff" />
 
     <Button
         android:id="@+id/btn_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="列表，分类"
         android:background="#39CC8C"
-        android:textColor="#ffffff"/>
+        android:text="列表，分类"
+        android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/btn_poi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="#CC9B39"
+        android:text="抽屉效果"
+        android:textColor="#ffffff" />
+
 </LinearLayout>
