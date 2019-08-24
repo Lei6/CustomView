@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/haizw" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_below="@+id/img"
+                android:gravity="center"
+                android:text="内容"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar_details"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@android:color/transparent">
+
+        <ImageView
+            android:id="@+id/back_details"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="2dp"
+            android:src="@mipmap/back_blue" />
+
+        <ImageView
+            android:id="@+id/shopping_details"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:padding="7dp"
+            android:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
