@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".loopviewpage.BannerActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.demo.customview.loopviewpage.LoopViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loop_view_page"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:animStyle="defaults"
+                app:animTime="1000"
+                app:loopTime="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.demo.customview.loopviewpage.LoopDotsView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:dotColor="#FFFFFF"
+                        app:dotHeight="3dp"
+                        app:dotRange="5dp"
+                        app:dotSelectColor="#999999"
+                        app:dotShape="rectangle"
+                        app:dotSize="10dp"  />
+                </LinearLayout>
+
+            </com.demo.customview.loopviewpage.LoopViewPager>
+
+            <com.demo.customview.loopviewpage.LoopViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loop_view_page_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:animStyle="accordion"
+                app:animTime="1000"
+                app:loopTime="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.demo.customview.loopviewpage.LoopDotsView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:dotColor="#FFFFFF"
+                        app:dotHeight="3dp"
+                        app:dotRange="5dp"
+                        app:dotSelectColor="#999999"
+                        app:dotShape="oval"
+                        app:dotSize="10dp"  />
+                </LinearLayout>
+
+            </com.demo.customview.loopviewpage.LoopViewPager>
+
+            <com.demo.customview.loopviewpage.LoopViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loop_view_page3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:animStyle="accordionUp"
+                app:animTime="1000"
+                app:loopTime="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.demo.customview.loopviewpage.LoopDotsView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:dotColor="#FFFFFF"
+                        app:dotHeight="3dp"
+                        app:dotRange="5dp"
+                        app:dotSelectColor="#999999"
+                        app:dotShape="triangle"
+                        app:dotSize="10dp"  />
+                </LinearLayout>
+
+            </com.demo.customview.loopviewpage.LoopViewPager>
+
+            <com.demo.customview.loopviewpage.LoopViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loop_view_page4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:animStyle="cube"
+                app:animTime="1000"
+                app:loopTime="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.demo.customview.loopviewpage.LoopDotsView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:dotColor="#FFFFFF"
+                        app:dotHeight="3dp"
+                        app:dotRange="5dp"
+                        app:dotSelectColor="#999999"
+                        app:dotShape="diamond"
+                        app:dotSize="10dp"  />
+                </LinearLayout>
+
+            </com.demo.customview.loopviewpage.LoopViewPager>
+
+
+            <com.demo.customview.loopviewpage.LoopViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loop_view_page5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:animStyle="cubeUp"
+                app:animTime="1000"
+                app:loopTime="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.demo.customview.loopviewpage.LoopDotsView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:dotColor="#FFFFFF"
+                        app:dotHeight="3dp"
+                        app:dotRange="5dp"
+                        app:dotSelectColor="#999999"
+                        app:dotShape="rectangle"
+                        app:dotSize="10dp"  />
+                </LinearLayout>
+
+            </com.demo.customview.loopviewpage.LoopViewPager>
+
+            <com.demo.customview.loopviewpage.LoopViewPager
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/loop_view_page6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_200"
+                app:animStyle="gallery"
+                app:animTime="1000"
+                app:loopTime="1500">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.demo.customview.loopviewpage.LoopDotsView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:dotColor="#FFFFFF"
+                        app:dotHeight="3dp"
+                        app:dotRange="5dp"
+                        app:dotSelectColor="#999999"
+                        app:dotShape="rectangle"
+                        app:dotSize="10dp"  />
+                </LinearLayout>
+
+            </com.demo.customview.loopviewpage.LoopViewPager>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>

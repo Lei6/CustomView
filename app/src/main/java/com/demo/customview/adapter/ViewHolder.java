@@ -49,7 +49,7 @@ public class ViewHolder extends RecyclerView.ViewHolder implements ItemTouchHelp
     /**
      * 设置文本控件Text值
      */
-    public ViewHolder setText(int viewId, String text) {
+    public ViewHolder setText(int viewId, CharSequence text) {
         TextView textView = (TextView) getView(viewId);
         textView.setText(text);
         return this;
