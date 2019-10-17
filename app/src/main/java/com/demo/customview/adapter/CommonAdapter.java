@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * created by 姚明亮
@@ -17,20 +18,20 @@ import java.util.ArrayList;
 public abstract class CommonAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
 
     public Context mContext;
-    public ArrayList<T> mData;
+    public List<T> mData;
     private int mLayoutId;
 
     private LayoutInflater mInflater = null;
     private MultipleType<T> mTypeSupport = null;
 
-    public CommonAdapter(Context mContext, ArrayList<T> mData, int mLayoutId) {
+    public CommonAdapter(Context mContext, List<T> mData, int mLayoutId) {
         this.mContext = mContext;
         this.mData = mData;
         this.mLayoutId = mLayoutId;
         mInflater = LayoutInflater.from(mContext);
     }
 
-    public CommonAdapter(Context mContext, ArrayList<T> mData, int mLayoutId, LayoutInflater mInflater, MultipleType<T> mTypeSupport) {
+    public CommonAdapter(Context mContext, List<T> mData, int mLayoutId, LayoutInflater mInflater, MultipleType<T> mTypeSupport) {
         this.mContext = mContext;
         this.mData = mData;
         this.mLayoutId = mLayoutId;

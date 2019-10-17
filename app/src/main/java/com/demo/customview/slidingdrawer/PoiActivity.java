@@ -42,7 +42,11 @@ public class PoiActivity extends AppCompatActivity implements PoiLayout.OnChange
 
     private void initData() {
         list = new ArrayList<>();
-        getData(1);
+        for (int i = 0; i <10 ; i++) {
+            list.add(new PoiBean("标题:", "xxxxxxxxxx"));
+        }
+
+//        getData(1);
         PoiAdapter adapter = new PoiAdapter(this, list,R.layout.item_poi);
         poiList.setLayoutManager(new LinearLayoutManager(this));
         poiList.setAdapter(adapter);

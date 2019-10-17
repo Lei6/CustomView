@@ -1,6 +1,9 @@
 package com.demo.customview.sort;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -11,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.customview.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SideActivity extends AppCompatActivity {
@@ -20,6 +22,7 @@ public class SideActivity extends AppCompatActivity {
     private LinearLayout llytTin;
     private SideBarView sbSidebar;
     private TextView tvTinLetter;
+    private EditText editSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,26 +36,30 @@ public class SideActivity extends AppCompatActivity {
         llytTin = (LinearLayout) findViewById(R.id.llyt_tin);
         sbSidebar = (SideBarView) findViewById(R.id.sb_sidebar);
         tvTinLetter = (TextView) findViewById(R.id.tv_tin_letter);
-
+        editSearch = (EditText) findViewById(R.id.edit_search);
         init();
     }
 
-    private ArrayList<SortBean> getDatas() {
-        String[] arrays = getResources().getStringArray(R.array.arrays_sort);
-        ArrayList<SortBean> datas = new ArrayList<>();
-        for (String c:arrays){
-            SortBean bean = new SortBean(c);
-            bean.content = c;
-            datas.add(bean);
-        }
-        return datas;
+    private List<SortBean> getDatas() {
+//        String[] arrays = getResources().getStringArray(R.array.arrays_sort);
+//        ArrayList<SortBean> datas = new ArrayList<>();
+//        for (String c:arrays){
+//            SortBean bean = new SortBean(c);
+//            bean.content = c;
+//            datas.add(bean);
+//        }
+        PhoneUtil phoneUtil = new PhoneUtil(this);
+        List<SortBean> phone = phoneUtil.getPhone();
+
+        return phone;
     }
 
     private void init() {
-        ArrayList<SortBean> datas = getDatas();
+        List<SortBean> datas = getDatas();
         final SortUtil sortUtil = new SortUtil();
         rvList.setLayoutManager(new LinearLayoutManager(this));
-        rvList.setAdapter(new SortAdapter(this,datas,R.layout.item_sort));
+        final SortAdapter sortAdapter = new SortAdapter(this, datas, R.layout.item_sort);
+        rvList.setAdapter(sortAdapter);
         rvList.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
@@ -62,7 +69,7 @@ public class SideActivity extends AppCompatActivity {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                sortUtil.onScrolled(recyclerView,llytTin,tvTinLetter);
+                sortUtil.onScrolled(recyclerView, llytTin, tvTinLetter);
             }
         });
         sbSidebar.setType(SideBarView.TYPE_CENTER);
@@ -70,7 +77,24 @@ public class SideActivity extends AppCompatActivity {
         sbSidebar.setOnLetterChangedListener(new SideBarView.OnLetterChangedListener() {
             @Override
             public void onChange(int index, String c) {
-                sortUtil.onChange(index,c,rvList);
+                sortUtil.onChange(index, c, rvList);
+            }
+        });
+
+        editSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                sortAdapter.getFilter().filter(editable);
             }
         });
 

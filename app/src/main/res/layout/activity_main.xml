@@ -1,73 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn_play"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#CC3939"
-        android:text="音乐播放"
-        android:textColor="#ffffff" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_toggle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#CCC539"
-        android:text="切换按钮"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#CC3939"
+            android:text="音乐播放"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btn_sort"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#39CC8C"
-        android:text="列表，分类"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btn_toggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#CCC539"
+            android:text="切换按钮"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btn_poi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#CC9B39"
-        android:text="抽屉效果"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btn_sort"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#39CC8C"
+            android:text="联系人，列表，分类"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btn_silde"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#CC39A2"
-        android:text="滑动标题变色"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btn_poi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#CC9B39"
+            android:text="抽屉效果"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btn_logistics"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#7139CC"
-        android:text="物流、时间抽"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btn_silde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#CC39A2"
+            android:text="滑动标题变色"
+            android:textColor="#ffffff" />
 
-    <Button
-        android:id="@+id/btn_banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:background="#2E8BDD"
-        android:text="轮播图"
-        android:textColor="#ffffff" />
+        <Button
+            android:id="@+id/btn_logistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#7139CC"
+            android:text="物流、时间抽"
+            android:textColor="#ffffff" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#2E8BDD"
+            android:text="轮播图"
+            android:textColor="#ffffff"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_fold_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="#BE651C68"
+            android:text="可折叠TextView"
+            android:textColor="#ffffff" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

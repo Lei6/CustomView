@@ -85,4 +85,16 @@
         <attr name="dotSelectResource" format="reference" />
     </declare-styleable>
 
+<!--    折叠文字-->
+    <declare-styleable name="FoldTextView">
+        <attr name="showMaxLine" format="integer" />
+        <attr name="tipGravity" format="integer" />
+        <attr name="tipColor" format="reference|color" />
+        <attr name="tipClickable" format="boolean" />
+        <attr name="foldText" format="string" />
+        <attr name="expandText" format="string" />
+        <attr name="showTipAfterExpand" format="boolean" />
+        <attr name="isSetParentClick" format="boolean" />
+    </declare-styleable>
+
 </resources>
