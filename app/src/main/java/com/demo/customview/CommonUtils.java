@@ -22,6 +22,15 @@ import java.util.regex.Pattern;
  * Time：2019/8/12 16:31
  */
 public class CommonUtils {
+
+    /**
+     * 获取屏幕宽度
+     */
+
+    public static int getScreenWidth(Context context) {
+        return context.getResources().getDisplayMetrics().widthPixels;
+    }
+
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */

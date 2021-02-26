@@ -17,6 +17,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.customview.foldedtext.FoldedTextActivity;
 import com.demo.customview.logisticstraces.LogisticsActivity;
@@ -26,6 +28,9 @@ import com.demo.customview.slide.Slide2Activity;
 import com.demo.customview.slidingdrawer.PoiActivity;
 import com.demo.customview.sort.SideActivity;
 import com.demo.customview.toggle.ToggleButtonActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -37,12 +42,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnLogistics;
     private Button btnBanner;
     private Button btnFoldText;
+    private RecyclerView recyclerView;
+    private String[] array = new String[]{"音乐播放", "切换按钮", "联系人列表", "抽屉效果", "可折叠TextView", "九宫图"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        initAdapter();
+    }
+
+    private void initAdapter() {
+        ArrayList<BtnBean> mData = new ArrayList<BtnBean>();
+        for (int i = 0; i < array.length; i++) {
+            mData.add(new BtnBean(array[i], i));
+        }
+        Adapter adapter = new Adapter(this, mData, R.layout.item_main_view, this);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
     }
 
     private void initView() {
@@ -62,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSort.setOnClickListener(this);
         btnPlay.setOnClickListener(this);
         btnToggle.setOnClickListener(this);
+        recyclerView = findViewById(R.id.recycler_view);
 
     }
 
