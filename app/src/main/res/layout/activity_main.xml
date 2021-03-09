@@ -67,16 +67,6 @@
             android:visibility="gone"/>
 
         <Button
-            android:id="@+id/btn_logistics"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="#7139CC"
-            android:text="物流、时间抽"
-            android:textColor="#ffffff"
-            android:visibility="gone"/>
-
-        <Button
             android:id="@+id/btn_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

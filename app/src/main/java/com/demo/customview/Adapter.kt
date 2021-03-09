@@ -5,6 +5,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.demo.customview.adapter.CommonAdapter
@@ -12,6 +13,7 @@ import com.demo.customview.adapter.ViewHolder
 import com.demo.customview.foldedtext.FoldedTextActivity
 import com.demo.customview.music.MusicActivity
 import com.demo.customview.ninegridview.NineGridActivity
+import com.demo.customview.picture_processing.PictureActivity
 import com.demo.customview.slidingdrawer.PoiActivity
 import com.demo.customview.sort.SideActivity
 import com.demo.customview.toggle.ToggleButtonActivity
@@ -43,6 +45,10 @@ class Adapter(mContext: Context?, mData: ArrayList<BtnBean>?, mLayoutId: Int,act
                 3-> Jump(PoiActivity::class.java)
                 4-> Jump(FoldedTextActivity::class.java)
                 5-> Jump(NineGridActivity::class.java)
+                6-> {
+//                    Jump(PictureActivity::class.java)
+                    Toast.makeText(mContext,"完善中",Toast.LENGTH_LONG).show()
+                }
             }
         }
 

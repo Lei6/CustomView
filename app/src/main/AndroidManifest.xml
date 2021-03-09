@@ -14,13 +14,13 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".foldedtext.FoldedTextActivity"></activity>
         <activity android:name=".loopviewpage.BannerActivity" />
-        <activity android:name=".logisticstraces.LogisticsActivity" />
         <activity android:name=".slide.Slide2Activity" />
         <activity android:name=".slidingdrawer.PoiActivity" />
         <activity android:name=".sort.SideActivity" />
         <activity android:name=".toggle.ToggleButtonActivity" />
         <activity android:name=".music.MusicActivity" />
         <activity android:name=".ninegridview.NineGridActivity"/>
+        <activity android:name=".picture_processing.PictureActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

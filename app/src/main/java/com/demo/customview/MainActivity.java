@@ -21,7 +21,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.demo.customview.foldedtext.FoldedTextActivity;
-import com.demo.customview.logisticstraces.LogisticsActivity;
 import com.demo.customview.loopviewpage.BannerActivity;
 import com.demo.customview.music.MusicActivity;
 import com.demo.customview.slide.Slide2Activity;
@@ -39,11 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnSort;
     private Button btnPoi;
     private Button btnSilde;
-    private Button btnLogistics;
     private Button btnBanner;
     private Button btnFoldText;
     private RecyclerView recyclerView;
-    private String[] array = new String[]{"音乐播放", "切换按钮", "联系人列表", "抽屉效果", "可折叠TextView", "九宫图"};
+    private String[] array = new String[]{"音乐播放", "切换按钮", "联系人列表", "抽屉效果", "可折叠TextView",
+             "九宫图","保存视图"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,12 +68,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSort = (Button) findViewById(R.id.btn_sort);
         btnPoi = (Button) findViewById(R.id.btn_poi);
         btnSilde = (Button) findViewById(R.id.btn_silde);
-        btnLogistics = (Button) findViewById(R.id.btn_logistics);
         btnBanner = (Button) findViewById(R.id.btn_banner);
         btnFoldText = (Button) findViewById(R.id.btn_fold_text);
         btnFoldText.setOnClickListener(this);
         btnBanner.setOnClickListener(this);
-        btnLogistics.setOnClickListener(this);
         btnSilde.setOnClickListener(this);
         btnPoi.setOnClickListener(this);
         btnSort.setOnClickListener(this);
@@ -107,9 +104,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_silde:
                 intent = new Intent(this, Slide2Activity.class);
-                break;
-            case R.id.btn_logistics:
-                intent = new Intent(this, LogisticsActivity.class);
                 break;
             case R.id.btn_banner:
                 intent = new Intent(this, BannerActivity.class);
