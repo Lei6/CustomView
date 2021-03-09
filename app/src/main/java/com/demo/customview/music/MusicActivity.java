@@ -17,6 +17,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MusicActivity extends AppCompatActivity implements View.OnClickListener, SeekBar.OnSeekBarChangeListener, MediaPlayer.OnCompletionListener {
@@ -113,8 +114,8 @@ public class MusicActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    private List<MusicRow> getLrcRows() {
-        List<MusicRow> rows = null;
+    private ArrayList<MusicRow> getLrcRows() {
+        ArrayList<MusicRow> rows = null;
         InputStream is = getResources().openRawResource(R.raw.hs);
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String line;

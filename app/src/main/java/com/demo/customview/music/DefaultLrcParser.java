@@ -29,11 +29,11 @@ public class DefaultLrcParser {
     }
 
     @NonNull
-    public static List<MusicRow> getLrcRows(String content) {
+    public static ArrayList<MusicRow> getLrcRows(String content) {
         if (TextUtils.isEmpty(content)) {
             return new ArrayList<>();
         }
-        List<MusicRow> lrcRows = new ArrayList<>();
+        ArrayList<MusicRow> lrcRows = new ArrayList<>();
         BufferedReader br = new BufferedReader(new StringReader(content));
         String lrcLine;
         try {

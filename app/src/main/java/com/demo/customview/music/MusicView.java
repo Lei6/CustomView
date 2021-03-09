@@ -350,7 +350,7 @@ public class MusicView extends View implements IMusicView {
     }
 
     @Override
-    public void setData(List<MusicRow> lrcRows) {
+    public void setData(ArrayList<MusicRow> lrcRows) {
         if (lrcRows != null) {
             forceFinished();
             mLastRow = -1;
@@ -362,7 +362,7 @@ public class MusicView extends View implements IMusicView {
         }
     }
 
-    public void setData(List<MusicRow> lrcRows, int progress) {
+    public void setData(ArrayList<MusicRow> lrcRows, int progress) {
         if (progress <= 0) {
             setData(lrcRows);
             return;
