@@ -1,10 +1,9 @@
-package com.demo.customview.nine_grid_view
+package com.demo.customview.ninegridview
 
 import android.content.Context
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.ColorDrawable
-import android.text.TextUtils
 import android.view.MotionEvent
 import android.widget.ImageView
 import com.bumptech.glide.Glide
@@ -16,7 +15,7 @@ import com.bumptech.glide.Glide
 class CustomImageView(mContext: Context) : ImageView(mContext) {
 
     private var isAttachedTowindow: Boolean = false
-    private var url: String? = null
+    private var url: Int = 0
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         when (event?.action) {
@@ -43,8 +42,8 @@ class CustomImageView(mContext: Context) : ImageView(mContext) {
         super.onAttachedToWindow()
     }
 
-    private fun setImageUrl(url: String?) {
-        if (!TextUtils.isEmpty(url)) {
+    fun setImageUrl(url: Int?) {
+        if (url!=null) {
             this.url = url
             if (isAttachedTowindow) {
                 Glide.with(context)
