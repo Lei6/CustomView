@@ -1,7 +1,6 @@
 package com.demo.customview;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -23,7 +22,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.demo.customview.foldedtext.FoldedTextActivity;
 import com.demo.customview.loopviewpage.BannerActivity;
 import com.demo.customview.music.MusicActivity;
-import com.demo.customview.slide.Slide2Activity;
 import com.demo.customview.slidingdrawer.PoiActivity;
 import com.demo.customview.sort.SideActivity;
 import com.demo.customview.toggle.ToggleButtonActivity;
@@ -37,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnToggle;
     private Button btnSort;
     private Button btnPoi;
-    private Button btnSilde;
     private Button btnBanner;
     private Button btnFoldText;
     private RecyclerView recyclerView;
@@ -67,12 +64,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToggle = (Button) findViewById(R.id.btn_toggle);
         btnSort = (Button) findViewById(R.id.btn_sort);
         btnPoi = (Button) findViewById(R.id.btn_poi);
-        btnSilde = (Button) findViewById(R.id.btn_silde);
         btnBanner = (Button) findViewById(R.id.btn_banner);
         btnFoldText = (Button) findViewById(R.id.btn_fold_text);
         btnFoldText.setOnClickListener(this);
         btnBanner.setOnClickListener(this);
-        btnSilde.setOnClickListener(this);
         btnPoi.setOnClickListener(this);
         btnSort.setOnClickListener(this);
         btnPlay.setOnClickListener(this);
@@ -101,9 +96,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_poi:
                 intent = new Intent(this, PoiActivity.class);
-                break;
-            case R.id.btn_silde:
-                intent = new Intent(this, Slide2Activity.class);
                 break;
             case R.id.btn_banner:
                 intent = new Intent(this, BannerActivity.class);

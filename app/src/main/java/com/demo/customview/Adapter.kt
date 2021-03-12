@@ -45,10 +45,8 @@ class Adapter(mContext: Context?, mData: ArrayList<BtnBean>?, mLayoutId: Int,act
                 3-> Jump(PoiActivity::class.java)
                 4-> Jump(FoldedTextActivity::class.java)
                 5-> Jump(NineGridActivity::class.java)
-                6-> {
-//                    Jump(PictureActivity::class.java)
-                    Toast.makeText(mContext,"完善中",Toast.LENGTH_LONG).show()
-                }
+                6-> Jump(PictureActivity::class.java)
+
             }
         }
 

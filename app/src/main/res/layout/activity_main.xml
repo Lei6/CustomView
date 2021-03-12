@@ -57,16 +57,6 @@
             android:visibility="gone"/>
 
         <Button
-            android:id="@+id/btn_silde"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="#CC39A2"
-            android:text="滑动标题变色"
-            android:textColor="#ffffff"
-            android:visibility="gone"/>
-
-        <Button
             android:id="@+id/btn_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -14,7 +14,6 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".foldedtext.FoldedTextActivity"></activity>
         <activity android:name=".loopviewpage.BannerActivity" />
-        <activity android:name=".slide.Slide2Activity" />
         <activity android:name=".slidingdrawer.PoiActivity" />
         <activity android:name=".sort.SideActivity" />
         <activity android:name=".toggle.ToggleButtonActivity" />
