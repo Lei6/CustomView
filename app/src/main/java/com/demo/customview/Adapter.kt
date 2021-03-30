@@ -46,6 +46,7 @@ class Adapter(mContext: Context?, mData: ArrayList<BtnBean>?, mLayoutId: Int,act
                 4-> Jump(FoldedTextActivity::class.java)
                 5-> Jump(NineGridActivity::class.java)
                 6-> Jump(PictureActivity::class.java)
+                7->{}
 
             }
         }
