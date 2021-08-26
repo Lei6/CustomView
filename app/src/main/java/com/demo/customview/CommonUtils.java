@@ -31,6 +31,10 @@ public class CommonUtils {
         return context.getResources().getDisplayMetrics().widthPixels;
     }
 
+    public static int getScreenHeight(Context context) {
+        return context.getResources().getDisplayMetrics().heightPixels;
+    }
+
     /**
      * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
      */

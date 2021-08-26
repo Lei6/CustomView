@@ -25,6 +25,7 @@ import com.demo.customview.music.MusicActivity;
 import com.demo.customview.slidingdrawer.PoiActivity;
 import com.demo.customview.sort.SideActivity;
 import com.demo.customview.toggle.ToggleButtonActivity;
+import com.demo.customview.window_manager.FloatWindowService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnFoldText;
     private RecyclerView recyclerView;
     private String[] array = new String[]{"音乐播放", "切换按钮", "联系人列表", "抽屉效果", "可折叠TextView",
-             "九宫图","保存视图","二维码扫描"};
+             "九宫图","保存View视图","PopupWindow"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,9 +105,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(this, FoldedTextActivity.class);
                 break;
         }
-        if (intent != null) {
-            startActivity(intent);
-        }
+//        if (intent != null) {
+//            startActivity(intent);
+//        }
     }
 
     @Override
