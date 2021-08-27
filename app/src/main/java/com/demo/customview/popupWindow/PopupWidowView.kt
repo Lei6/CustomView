@@ -51,7 +51,7 @@ class PopupWidowView(context: Context?) : PopupWindow(context) {
         mPopupBackView.setContentPosition(popupWindowPos!!)
         mPopupBackView.setPosCenterPosition(positionViewCenterPos!!)
         mPopupBackView.setPosViewHeight(positionView.measuredHeight)
-        mPopupBackView.setViewWidth(width) //注意这里传入的参数为popop的宽度
+        mPopupBackView.setViewWidth(width) //注意这里传入的参数为popup的宽度
         mPopupBackView.setViewHeight(mContentView!!.measuredHeight)
         mPopupBackView.setShowDirection(isShowDown(mContentView!!, positionView, mTriangleHeight))
         mPopupBackView.setTranWidth(mTriangleWidth)

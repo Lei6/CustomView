@@ -18,7 +18,7 @@ class PopupWindowActivity: AppCompatActivity() {
 
         val popupWindow = PopupWidowView(this)
         val datas = ArrayList<ButtonData>()
-        for (i in 0 until 5){
+        for (i in 0 until 3){
             val buttonData = ButtonData(R.mipmap.ic_launcher,"选项${i}")
             datas.add(buttonData)
         }
