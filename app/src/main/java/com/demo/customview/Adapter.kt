@@ -15,6 +15,7 @@ import com.demo.customview.music.MusicActivity
 import com.demo.customview.ninegridview.NineGridActivity
 import com.demo.customview.picture_processing.PictureActivity
 import com.demo.customview.popupWindow.PopupWindowActivity
+import com.demo.customview.round_image.RoundImageActivity
 import com.demo.customview.scan_qr_code.ScanActivity
 import com.demo.customview.slidingdrawer.PoiActivity
 import com.demo.customview.sort.SideActivity
@@ -49,6 +50,7 @@ class Adapter(mContext: Context?, mData: ArrayList<BtnBean>?, mLayoutId: Int,act
                 5-> Jump(NineGridActivity::class.java)
                 6-> Jump(PictureActivity::class.java)
                 7-> Jump(PopupWindowActivity::class.java)
+                8-> Jump(RoundImageActivity::class.java)
 
             }
         }

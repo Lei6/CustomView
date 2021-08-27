@@ -22,6 +22,7 @@
         <activity android:name=".ninegridview.NineGridActivity"/>
         <activity android:name=".picture_processing.PictureActivity"/>
         <activity android:name=".popupWindow.PopupWindowActivity"/>
+        <activity android:name=".round_image.RoundImageActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
