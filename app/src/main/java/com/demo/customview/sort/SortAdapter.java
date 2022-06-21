@@ -1,6 +1,7 @@
 package com.demo.customview.sort;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Filter;
 import android.widget.Filterable;
@@ -33,6 +34,12 @@ public class SortAdapter extends CommonAdapter<SortBean> implements Filterable {
             holder.setViewVisibility(R.id.llyt_sort,View.GONE);
         }
         holder.setText(R.id.tv_content,sortBean.content);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mContext.startActivity(new Intent(mContext,ContactInfoActivity.class));
+            }
+        });
     }
 
     @Override
