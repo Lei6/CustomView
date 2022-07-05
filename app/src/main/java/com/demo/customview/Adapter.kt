@@ -5,21 +5,14 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
-import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.demo.customview.adapter.CommonAdapter
 import com.demo.customview.adapter.ViewHolder
-import com.demo.customview.foldedtext.FoldedTextActivity
 import com.demo.customview.music.MusicActivity
-import com.demo.customview.ninegridview.NineGridActivity
 import com.demo.customview.picture_processing.PictureActivity
-import com.demo.customview.popupWindow.PopupWindowActivity
-import com.demo.customview.round_image.RoundImageActivity
-import com.demo.customview.scan_qr_code.ScanActivity
 import com.demo.customview.slidingdrawer.PoiActivity
 import com.demo.customview.sort.SideActivity
-import com.demo.customview.toggle.ToggleButtonActivity
 
 /**
  * Author by YML, Date on 2021/2/26.
@@ -36,29 +29,27 @@ class Adapter(mContext: Context?, mData: ArrayList<BtnBean>?, mLayoutId: Int,act
 
         holder?.setViewOnClickListener(R.id.tv_btn_title) {
             when(position){
-                0-> Jump(MusicActivity::class.java)
-                1-> Jump(ToggleButtonActivity::class.java)
+                0-> Jump(MusicActivity::class.java,position)
+                1-> Jump(PictureActivity::class.java,position)
                 2-> {
                    if (ContextCompat.checkSelfPermission(mContext, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED){
                        ActivityCompat.requestPermissions(mActivity!!, arrayOf(Manifest.permission.READ_CONTACTS), 201)
                    }else{
-                       Jump(SideActivity::class.java)
+                       Jump(SideActivity::class.java,position)
                    }
                 }
-                3-> Jump(PoiActivity::class.java)
-                4-> Jump(FoldedTextActivity::class.java)
-                5-> Jump(NineGridActivity::class.java)
-                6-> Jump(PictureActivity::class.java)
-                7-> Jump(PopupWindowActivity::class.java)
-                8-> Jump(RoundImageActivity::class.java)
-
+                3-> Jump(PoiActivity::class.java,position)
+                else -> {
+                    Jump(PictureActivity::class.java,position)
+                }
             }
         }
 
     }
 
-    private fun Jump(clazz: Class<*>){
+    private fun Jump(clazz: Class<*>,position: Int){
         var intent = Intent(mContext,clazz)
+        intent.putExtra("index",position)
         mContext.startActivity(intent)
     }
 }

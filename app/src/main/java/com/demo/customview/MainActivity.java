@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnFoldText;
     private RecyclerView recyclerView;
     private String[] array = new String[]{"音乐播放", "切换按钮", "联系人列表", "抽屉效果", "可折叠TextView",
-             "九宫图","保存View视图","PopupWindow","圆形图像"};
+             "九宫图","保存View视图","PopupWindow","圆形图像","滚动的img"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

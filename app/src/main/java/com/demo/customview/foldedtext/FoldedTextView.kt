@@ -20,7 +20,8 @@ import com.demo.customview.R
  *created by 姚明亮
  *Time：2019/10/12 11:53
  */
-class FoldedTextView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : AppCompatTextView(context, attrs, defStyleAttr) {
+class FoldedTextView @JvmOverloads constructor(context: Context?, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : AppCompatTextView(
+    context!!, attrs, defStyleAttr) {
 
     companion object {
         val ELLIPSIZE_END = "..."

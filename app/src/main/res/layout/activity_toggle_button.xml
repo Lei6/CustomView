@@ -4,36 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".toggle.ToggleButtonActivity">
+    android:orientation="vertical">
 
     <com.demo.customview.toggle.ToggleButton
         android:id="@+id/btn_toggle"
         android:layout_width="60dp"
         android:layout_height="32dp"
         android:layout_margin="12dp"
-        app:ui_view_colorThumb="@color/colorFFFFFF"
-        app:ui_view_colorTrackOpen="#008577"
-        app:ui_view_colorTrackOff="@color/colorFFFFFF"
         app:ui_view_colorPadding="@color/colorE34E5"
-        app:ui_view_padding="1.5dp"
+        app:ui_view_colorThumb="@color/colorFFFFFF"
+        app:ui_view_colorTrackOff="@color/colorFFFFFF"
+        app:ui_view_colorTrackOpen="#008577"
         app:ui_view_duration="250"
-        />
+        app:ui_view_padding="1.5dp" />
 
-    <com.demo.customview.round_image.RoundImageView
+    <LinearLayout
+        android:id="@+id/round_image_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        app:radius="50dp"
-        app:type="circle"/>
+        android:orientation="vertical">
 
-    <com.demo.customview.round_image.RoundImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
-        app:type="round"
-        app:radius="10dp"
-        android:layout_marginTop="20dp"/>
+        <com.demo.customview.round_image.RoundImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:radius="50dp"
+            app:type="circle" />
+
+        <com.demo.customview.round_image.RoundImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:radius="10dp"
+            app:type="round" />
+    </LinearLayout>
 
 
 </LinearLayout>
